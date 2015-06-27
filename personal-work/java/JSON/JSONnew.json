@@ -1,0 +1,35 @@
+{"_comment" : " this is how i researched how to do comments http://blog.justin.kelly.org.au/comments-in-json/"
+    "_comment" : "i have made a JSON array and how to use it in javascript file,"
+    
+    "_comment" : "This is a JSON array"
+
+"BestFriends":[
+    {"firstName":"Chad", "lastName":"Hill"},
+    {"firstName":"Christian", "lastName":"Shaw"},
+    {"firstName":"David", "lastName":"Humpherys"}
+]
+"_comment" : "This is a normal Java Script array not in JSON notation just to show the differences"
+var GroupMembers = [
+    {"firstName":"Chad", "lastName":"Hill"},
+    {"firstName":"Christian", "lastName":"Shaw"},
+    {"firstName":"David", "lastName":"Humpherys"}
+]
+
+
+"_comment" : "JavaScript example using JSON syntax"
+var example = '{ "bestfriends" : [' +
+'{ "firstName":"Chad" , "lastName":"Hill" },' +
+'{ "firstName":"Christian" , "lastName":"Shaw" },' +
+'{ "firstName":"David" , "lastName":"Humphreys" } ]}';
+]
+"_comment" : "Here is the JSON.parse and it is converting the JSON into a JavaScript object"
+var obj = JSON.parse(example);
+
+"_comment" : "Now we can use the new JavaScript object"
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+obj.bestfriends[1].firstName + " " + obj.bestfriends[1].lastName;
+</script>
+}
